@@ -4,12 +4,34 @@ public class BitwiseAlgorithm
 {
     public static void main(String[] args)
     {
-        int x = 4;
-        int y = 5;
+        int x = 5;
+        int y = 4;
+        int k = 2;
         bitwiseAnd(x, y);
         bitwiseOr(x, y);
         bitwiseComplement(x);
         bitwiseXor(x, y);
+        bitwiseRightShift(x, k);
+        bitwiseLeftShift(x, k);
+        bitwiseUnsignedRightShift(x, k);
+    }
+
+    private static void bitwiseUnsignedRightShift(int x, int k)
+    {
+        int result = x>>>k;
+        System.out.println("Bitwise >>>: "+result);
+    }
+
+    private static void bitwiseLeftShift(int x, int k)
+    {
+        int result = x<<k;
+        System.out.println("Bitwise <<: "+result);
+    }
+
+    private static void bitwiseRightShift(int x, int k)
+    {
+        int result = x>>k;
+        System.out.println("Bitwise >>: "+result);
     }
 
     private static void bitwiseXor(int x, int y)
