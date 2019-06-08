@@ -1,4 +1,4 @@
-package com.ritesh.dsa.arrays;
+package com.ritesh.arrays;
 
 public class Insertion
 {

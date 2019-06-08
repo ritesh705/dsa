@@ -1,4 +1,8 @@
-package com.ritesh.dsa.hashing;
+package com.ritesh.hashing;
+
+import com.sun.deploy.util.StringUtils;
+
+import java.util.LinkedList;
 
 public class Frequency
 {
@@ -32,7 +36,20 @@ public class Frequency
 
     public static void main(String[] args)
     {
-        String str = "ababababacdefklhaslkhflk";
-        findFrequencyOfCharacter(str);
+        String str = "riteshkumar";
+        boolean testFlag = false;
+        if(!testFlag)
+        {
+            System.out.println("1st");
+        }
+        else if(testFlag)
+        {
+            System.out.println("2nd");
+        }
+        else
+        {
+            System.out.println("3rd");
+        }
+        //findFrequencyOfCharacter(str);
     }
 }
