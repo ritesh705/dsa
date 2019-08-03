@@ -1,8 +1,5 @@
 package com.ritesh.hashing;
 
-import com.sun.deploy.util.StringUtils;
-
-import java.util.LinkedList;
 
 public class Frequency
 {
