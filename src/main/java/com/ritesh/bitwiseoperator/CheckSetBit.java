@@ -8,10 +8,6 @@ public class CheckSetBit
         int k = 2;
         boolean isBitSet = isBitSet(x, k);
         System.out.println("Is Kth Bit Set : "+isBitSet);
-
-        Integer[] intArray = {2,2,3,3,3,4,4};
-        int number = 2233344;
-        System.out.println(number^number);
     }
 
     private static boolean isBitSet(int x, int k)

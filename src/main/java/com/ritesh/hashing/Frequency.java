@@ -47,6 +47,6 @@ public class Frequency
         {
             System.out.println("3rd");
         }
-        //findFrequencyOfCharacter(str);
+        findFrequencyOfCharacter(str);
     }
 }
