@@ -135,12 +135,12 @@ public class ShortestPath
         List<List<Integer>> list2d = new ArrayList<>();
         List<Integer> list01 = new ArrayList<>();
         list01.add(1);
-        list01.add(0);
-        list01.add(0);
+        list01.add(1);
+        list01.add(1);
         List<Integer> list02 = new ArrayList<>();
         list02.add(1);
         list02.add(0);
-        list02.add(0);
+        list02.add(1);
         List<Integer> list03 = new ArrayList<>();
         list03.add(1);
         list03.add(9);
