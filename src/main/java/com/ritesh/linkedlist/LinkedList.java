@@ -16,25 +16,29 @@ public class LinkedList
         tail = null;
     }
 
-    public void add(int data)
+    public void add(Integer data)
     {
-        Node currentNode = new Node();
-        currentNode.setData(data);
-        currentNode.setNext(null);
-        if(head==null)
+        if(data != null)
         {
-            head = currentNode;
-            tail = currentNode;
-        }
-        else
-        {
-            tail = currentNode;
+            Node currentNode = new Node();
+            currentNode.setData(data);
+            currentNode.setNext(null);
+            if(head==null)
+            {
+                head = currentNode;
+                tail = currentNode;
+            }
+            else
+            {
+                tail.setNext(currentNode);
+                tail = currentNode;
+            }
         }
     }
 
-    class Node
+    public class Node
     {
-        int data;
+        Integer data;
         Node next;
 
         public int getData()
