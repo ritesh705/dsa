@@ -1,5 +1,9 @@
 package com.ritesh.linkedlist;
 
+/*
+ * @author : Ritesh Kumar | ritesh705@gmail.com
+ *
+ * */
 public class Node
 {
     Integer data;

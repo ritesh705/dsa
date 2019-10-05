@@ -2,6 +2,11 @@ package com.ritesh.stack;
 
 import com.ritesh.linkedlist.Node;
 
+/*
+* @author : Ritesh Kumar | ritesh705@gmail.com
+*
+* Stack -> From LinkedList
+* */
 public class Stack
 {
     Node top;
