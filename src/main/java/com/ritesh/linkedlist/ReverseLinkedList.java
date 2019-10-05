@@ -7,9 +7,9 @@ public class ReverseLinkedList
 {
     public static LinkedList reverseLinkedList(LinkedList lList)
     {
-        LinkedList.Node cNode = lList.head;
-        LinkedList.Node pNode = null;
-        LinkedList.Node nNode = null;
+        Node cNode = lList.head;
+        Node pNode = null;
+        Node nNode = null;
         while(cNode!=null)
         {
             if(pNode == null)
@@ -38,7 +38,7 @@ public class ReverseLinkedList
         lList.add(5);
         lList.add(6);
         LinkedList list = reverseLinkedList(lList);
-        LinkedList.Node cNode = null;
+        Node cNode = null;
         if(list != null)
         {
             cNode = list.head;

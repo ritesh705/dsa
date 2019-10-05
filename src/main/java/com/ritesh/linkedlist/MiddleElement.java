@@ -8,8 +8,8 @@ public class MiddleElement
         {
             return null;
         }
-        LinkedList.Node currentNode = list.head;
-        LinkedList.Node middleNode = list.head;
+        Node currentNode = list.head;
+        Node middleNode = list.head;
         int length = 0;
         while(currentNode != null)
         {
