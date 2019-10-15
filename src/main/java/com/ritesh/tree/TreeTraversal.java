@@ -1,5 +1,8 @@
 package com.ritesh.tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class TreeTraversal
 {
     // LDR
@@ -32,6 +35,25 @@ public class TreeTraversal
         System.out.println(node.key);
     }
 
+    public static void levelOrder(Node node)
+    {
+        Queue<Node> queue = new LinkedList();
+        queue.add(node);
+        while(!queue.isEmpty())
+        {
+            Node tempNode = queue.poll();
+            System.out.println(tempNode.key);
+            if(tempNode.left != null)
+            {
+                queue.add(tempNode.left);
+            }
+            if(tempNode.right != null)
+            {
+                queue.add(tempNode.right);
+            }
+        }
+    }
+
     public static void main(String[] args)
     {
         Tree tree = new Tree();
@@ -41,13 +63,16 @@ public class TreeTraversal
         tree.root.left.left = new Node(4);
         tree.root.left.right = new Node(5);
 
-        System.out.println("Preorder traversal of binary tree is ");
+        System.out.println("PreOrder traversal of binary tree is ");
         preOrder(tree.root);
 
-        System.out.println("Inorder traversal of binary tree is ");
+        System.out.println("InOrder traversal of binary tree is ");
         inOrder(tree.root);
 
-        System.out.println("Postorder traversal of binary tree is ");
+        System.out.println("PostOrder traversal of binary tree is ");
         postOrder(tree.root);
+
+        System.out.println("LevelOrder traversal of binary tree is ");
+        levelOrder(tree.root);
     }
 }
