@@ -2,7 +2,10 @@ package com.ritesh.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
-
+/*
+* @author : Ritesh Kumar | ritesh705@gmail.com
+*
+* */
 public class TreeTraversal
 {
     // LDR
@@ -35,6 +38,7 @@ public class TreeTraversal
         System.out.println(node.key);
     }
 
+    // Level Order Traversal
     public static void levelOrder(Node node)
     {
         Queue<Node> queue = new LinkedList();
