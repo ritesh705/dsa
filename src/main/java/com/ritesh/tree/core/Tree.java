@@ -1,8 +1,8 @@
-package com.ritesh.tree;
+package com.ritesh.tree.core;
 
 public class Tree
 {
-    Node root;
+    public Node root;
 
     public Tree()
     {

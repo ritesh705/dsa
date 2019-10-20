@@ -1,10 +1,10 @@
-package com.ritesh.tree;
+package com.ritesh.tree.core;
 
 public class Node
 {
-    Integer key;
-    Node left;
-    Node right;
+    public Integer key;
+    public Node left;
+    public Node right;
 
     public Node(Integer val)
     {

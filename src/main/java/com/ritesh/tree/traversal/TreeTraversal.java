@@ -1,11 +1,16 @@
-package com.ritesh.tree;
+package com.ritesh.tree.traversal;
+
+import com.ritesh.tree.core.Node;
+import com.ritesh.tree.core.Tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
+
 /*
 * @author : Ritesh Kumar | ritesh705@gmail.com
 *
 * */
+
 public class TreeTraversal
 {
     // LDR
@@ -56,27 +61,5 @@ public class TreeTraversal
                 queue.add(tempNode.right);
             }
         }
-    }
-
-    public static void main(String[] args)
-    {
-        Tree tree = new Tree();
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(5);
-
-        System.out.println("PreOrder traversal of binary tree is ");
-        preOrder(tree.root);
-
-        System.out.println("InOrder traversal of binary tree is ");
-        inOrder(tree.root);
-
-        System.out.println("PostOrder traversal of binary tree is ");
-        postOrder(tree.root);
-
-        System.out.println("LevelOrder traversal of binary tree is ");
-        levelOrder(tree.root);
     }
 }
