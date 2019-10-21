@@ -3,6 +3,7 @@ package com.ritesh.tree;
 import com.ritesh.tree.core.Node;
 import com.ritesh.tree.core.Tree;
 import com.ritesh.tree.deletetion.Deletion;
+import com.ritesh.tree.diameter.Diameter;
 import com.ritesh.tree.insertion.Insertion;
 import com.ritesh.tree.lca.LowestCommonAncestor;
 import com.ritesh.tree.traversal.TreeTraversal;
@@ -44,5 +45,8 @@ public class App
 
         // Finding LCA
         System.out.println("LCA(2, 4) = " + LowestCommonAncestor.findLCA(tree.root, 2, 4).key);
+
+        // Finding Diameter
+        System.out.println("Diameter : "+ Diameter.getDiameter(tree.root));
     }
 }
