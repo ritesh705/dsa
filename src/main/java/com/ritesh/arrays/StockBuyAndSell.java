@@ -2,11 +2,13 @@ package com.ritesh.arrays;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /*
-* @author - Ritesh Kumar
+* @author :- Ritesh Kumar
 *
-* Stock buy and sell program
-* */
+* Program -> Buy & Sell Stock, Using local minima and maxima
+*/
+
 public class StockBuyAndSell
 {
     static class Stock
@@ -30,19 +32,10 @@ public class StockBuyAndSell
             this.sellDay = sellDay;
         }
     }
-    public static void main(String[] args)
-    {
-        List<Stock> stocks = getBuyAndSellPrices(new int[]{100, 180, 260, 310, 40, 535, 695 });
-        for(Stock stock : stocks)
-        {
-            System.out.println("Buy @ Day "+stock.getBuyDay()+" | Sell @ Day "+stock.getSellDay());
-        }
-    }
 
     private static List<Stock> getBuyAndSellPrices(int[] prices)
     {
         int n = prices.length;
-        // Idea is to get local maxima and minima
         List<Stock> stocks = new ArrayList<>();
         Stock stock = null;
         for(int i=0; i<n; i++)
@@ -95,5 +88,15 @@ public class StockBuyAndSell
             buyDay =i;
         }
         return buyDay;
+    }
+
+    // Run | Program
+    public static void main(String[] args)
+    {
+        List<Stock> stocks = getBuyAndSellPrices(new int[]{100, 180, 260, 310, 40, 535, 695 });
+        for(Stock stock : stocks)
+        {
+            System.out.println("Buy @ Day "+stock.getBuyDay()+" | Sell @ Day "+stock.getSellDay());
+        }
     }
 }
