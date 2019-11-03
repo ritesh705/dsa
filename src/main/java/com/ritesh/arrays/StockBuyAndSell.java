@@ -51,31 +51,19 @@ public class StockBuyAndSell
             {
                 stock = new Stock();
             }
-            if(i==0 && prices[i]<prices[i+1])
+
+            Integer buyDay = getBuyDay(prices, n, i);
+            if(buyDay != null)
             {
-                stock.buyDay =i;
-            }
-            else if(i==n-1 && prices[i]<prices[i-1])
-            {
-                stock.buyDay =i;
-            }
-            else if(i > 0 && i < n-1 && prices[i]<prices[i-1] && prices[i]<prices[i+1])
-            {
-                stock.buyDay = i;
+                stock.buyDay = buyDay;
             }
 
-            if(i==0 && prices[i]>prices[i+1])
+            Integer sellDay = getSellDay(prices, n, i);
+            if(sellDay != null)
             {
-                stock.sellDay = i;
+                stock.sellDay = sellDay;
             }
-            else if(i==n-1 && prices[i]>prices[i-1])
-            {
-                stock.sellDay = i;
-            }
-            else if(i > 0 && i < n-1 && prices[i]>prices[i-1] && prices[i]>prices[i+1])
-            {
-                stock.sellDay = i;
-            }
+
             if(stock!=null && stock.buyDay!=null && stock.sellDay!=null)
             {
                 stocks.add(stock);
@@ -83,5 +71,29 @@ public class StockBuyAndSell
             }
         }
         return stocks;
+    }
+
+    private static Integer getSellDay(int[] prices, int n, int i)
+    {
+        Integer sellDay = null;
+        if(i==0 && prices[i]>prices[i+1] ||
+                i==n-1 && prices[i]>prices[i-1] ||
+                i > 0 && i < n-1 && prices[i]>prices[i-1] && prices[i]>prices[i+1])
+        {
+            sellDay = i;
+        }
+        return sellDay;
+    }
+
+    private static Integer getBuyDay(int[] prices, int n, int i)
+    {
+        Integer buyDay = null;
+        if(i==0 && prices[i]<prices[i+1] ||
+                i==n-1 && prices[i]<prices[i-1] ||
+                i > 0 && i < n-1 && prices[i]<prices[i-1] && prices[i]<prices[i+1])
+        {
+            buyDay =i;
+        }
+        return buyDay;
     }
 }
