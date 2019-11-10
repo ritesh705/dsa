@@ -4,7 +4,7 @@
   <groupId>com.ritesh</groupId>
   <artifactId>dsa</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
   <name>dsa</name>
 
   <properties>
