@@ -4,7 +4,7 @@
   <groupId>com.ritesh</groupId>
   <artifactId>dsa</artifactId>
   <packaging>jar</packaging>
-  <version>1.1</version>
+  <version>1.2-SNAPSHOT</version>
   <name>dsa</name>
 
   <properties>
@@ -23,7 +23,7 @@
 
   <scm>
     <connection>scm:git:https://github.com/ritesh705/dsa.git</connection>
-    <tag>dsa-1.1</tag>
+    <tag>dsa-1.0</tag>
   </scm>
 
   <build>
