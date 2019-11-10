@@ -22,8 +22,7 @@
   </dependencies>
 
   <scm>
-    <connection>scm:git:https://github.com/ritesh705/dsa.git</connection>
-    <tag>HEAD</tag>
+    <developerConnection>scm:git:https://github.com/ritesh705/dsa.git</developerConnection>
   </scm>
 
   <build>
