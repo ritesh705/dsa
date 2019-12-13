@@ -1,7 +1,6 @@
 package com.ritesh.tree.traversal;
 
 import com.ritesh.tree.core.Node;
-import com.ritesh.tree.core.Tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
