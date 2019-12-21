@@ -1,5 +1,6 @@
 package com.ritesh.bst;
 
+import com.ritesh.bst.search.Insert;
 import com.ritesh.bst.search.Search;
 import com.ritesh.tree.core.Node;
 import com.ritesh.tree.core.Tree;
@@ -31,8 +32,14 @@ public class App
         bst.root.left.right = new Node(30);
         bst.root.left.right.right = new Node(40);
         bst.root.right = new Node(500);
+
+        // Insert Key - Operation
+        Insert insert = new Insert();
+        System.out.println(insert.insertKey(bst.root, 50));
+
+        // Search Key - Operation
         Search search = new Search();
-        Node result = search.searchBST(bst.root, 42);
+        Node result = search.searchKey(bst.root, 50);
         if(result != null)
         {
             System.out.println("Match Found : "+result.key);
