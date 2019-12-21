@@ -17,8 +17,9 @@ public class Deletion
         {
             tNode = queue.poll();
             if(tNode.key == data)
+            {
                 dNode = tNode;
-
+            }
             if(tNode.left != null)
             {
                 queue.add(tNode.left);
@@ -28,7 +29,6 @@ public class Deletion
                 queue.add(tNode.right);
             }
         }
-
         dNode.key = tNode.key;
         deleteRightmostDeepestNode(root, tNode);
     }
