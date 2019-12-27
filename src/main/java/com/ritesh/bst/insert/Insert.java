@@ -1,4 +1,4 @@
-package com.ritesh.bst.search;
+package com.ritesh.bst.insert;
 
 import com.ritesh.tree.core.Node;
 

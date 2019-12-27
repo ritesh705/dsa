@@ -1,7 +1,9 @@
 package com.ritesh.bst;
 
-import com.ritesh.bst.search.Insert;
+import com.ritesh.bst.delete.Delete;
+import com.ritesh.bst.insert.Insert;
 import com.ritesh.bst.search.Search;
+import com.ritesh.bst.traversal.Traversal;
 import com.ritesh.tree.core.Node;
 import com.ritesh.tree.core.Tree;
 
@@ -48,5 +50,13 @@ public class App
         {
             System.out.println("No Match Found");
         }
+
+        //Delete Key - Operation
+        Delete delete = new Delete();
+        System.out.println("Before");
+        Traversal.inorder(bst.root);
+        Node updatedTree = delete.deleteKey(bst.root, 20);
+        System.out.println("After");
+        Traversal.inorder(updatedTree);
     }
 }
