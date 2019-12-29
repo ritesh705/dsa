@@ -2,6 +2,7 @@ package com.ritesh.bst;
 
 import com.ritesh.bst.delete.Delete;
 import com.ritesh.bst.insert.Insert;
+import com.ritesh.bst.lca.LowestCommonAncestor;
 import com.ritesh.bst.search.Search;
 import com.ritesh.bst.traversal.Traversal;
 import com.ritesh.tree.core.Node;
@@ -58,5 +59,9 @@ public class App
         Node updatedTree = delete.deleteKey(bst.root, 20);
         System.out.println("After");
         Traversal.inorder(updatedTree);
+
+        //LCA
+        System.out.println("Lowest Common Ancestor:");
+        System.out.println(LowestCommonAncestor.findLCA(bst.root, 40, 500).key);
     }
 }
