@@ -45,7 +45,7 @@ public class TreeTraversal
     // Level Order Traversal
     public static void levelOrder(Node node)
     {
-        Queue<Node> queue = new LinkedList();
+        Queue<Node> queue = new LinkedList<>();
         queue.add(node);
         while(!queue.isEmpty())
         {
