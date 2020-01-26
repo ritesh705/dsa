@@ -4,9 +4,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/*
+* @author: Ritesh Kumar | ritesh705@gmail.com
+* */
 public class GraphBFS
 {
-    public static void BFS(Graph graph, int s)
+    public static void BFS(Graph graph, int sourceNode)
     {
         List<List<Integer>> adjacencyList = graph.adjacencyList;
         int v = adjacencyList.size();
@@ -16,21 +19,19 @@ public class GraphBFS
             visited[i] = false;
         }
         Queue<Integer> queue = new LinkedList<>();
-        queue.add(s);
-        visited[s] = true;
-        for(int i=0; i<adjacencyList.size(); i++)
+        queue.add(sourceNode);
+        visited[sourceNode] = true;
+        while(!queue.isEmpty())
         {
-            while(!queue.isEmpty())
+            sourceNode = queue.poll();
+            System.out.println(sourceNode);
+            for(int j=0; j<adjacencyList.get(sourceNode).size(); j++)
             {
-                s = queue.poll();
-                System.out.println(s);
-                for(int j=0; j<adjacencyList.get(s).size(); j++)
+                int nextNode = adjacencyList.get(sourceNode).get(j);
+                if(!visited[nextNode])
                 {
-                    if(!visited[adjacencyList.get(s).get(j)])
-                    {
-                        queue.add(adjacencyList.get(s).get(j));
-                        visited[adjacencyList.get(s).get(j)] = true;
-                    }
+                    queue.add(nextNode);
+                    visited[nextNode] = true;
                 }
             }
         }
