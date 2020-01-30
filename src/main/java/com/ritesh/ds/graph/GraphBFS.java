@@ -9,18 +9,15 @@ import java.util.Queue;
 * */
 public class GraphBFS
 {
-    public static void BFS(Graph graph, int sourceNode)
+    public static void bfs(Graph graph, int sourceNode)
     {
         List<List<Integer>> adjacencyList = graph.adjacencyList;
         int v = adjacencyList.size();
         Boolean[] visited = new Boolean[v+1];
-        for(int i=0; i<v+1; i++)
-        {
-            visited[i] = false;
-        }
+        initializeVisited(visited);
         Queue<Integer> queue = new LinkedList<>();
-        queue.add(sourceNode);
         visited[sourceNode] = true;
+        queue.add(sourceNode);
         while(!queue.isEmpty())
         {
             sourceNode = queue.poll();
@@ -30,10 +27,18 @@ public class GraphBFS
                 int nextNode = adjacencyList.get(sourceNode).get(j);
                 if(!visited[nextNode])
                 {
-                    queue.add(nextNode);
                     visited[nextNode] = true;
+                    queue.add(nextNode);
                 }
             }
+        }
+    }
+
+    private static void initializeVisited(Boolean[] visited)
+    {
+        for(int i=0; i<visited.length; i++)
+        {
+            visited[i] = false;
         }
     }
 }

@@ -14,6 +14,11 @@ public class App
         graph.addEdge(4, 6);
         graph.addEdge(5, 6);
         graph.printGraph();
-        GraphBFS.BFS(graph,1);
+        System.out.println("BFS Traversal");
+        GraphBFS.bfs(graph,1);
+        System.out.println("DFS Traversal");
+        GraphDFS.dfs(graph,1);
+        System.out.println("Recursive DFS Traversal");
+        GraphDFS.recursiveDFS(graph, 1);
     }
 }
