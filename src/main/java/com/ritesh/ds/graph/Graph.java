@@ -36,8 +36,7 @@ public class Graph
             List<Integer> innerList = adjacencyList.get(i);
             for (Integer j : innerList)
             {
-                System.out.print("->");
-                System.out.print(j);
+                System.out.print(" -> "+j);
             }
             System.out.println();
         }
