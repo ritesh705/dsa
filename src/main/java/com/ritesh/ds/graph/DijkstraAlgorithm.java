@@ -19,7 +19,6 @@ public class DijkstraAlgorithm
                                     {6,2,0,4,0},
                                     {5,0,4,0,0},
                                     {3,0,0,0,0,}};
-
         getShortestPath(graph, 0);
     }
 
