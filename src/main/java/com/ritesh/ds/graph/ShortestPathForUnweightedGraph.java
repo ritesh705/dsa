@@ -1,9 +1,7 @@
 package com.ritesh.ds.graph;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Set;
 
 public class ShortestPathForUnweightedGraph
 {
@@ -59,7 +57,6 @@ public class ShortestPathForUnweightedGraph
                         {0,0,0,0,1,0,1,0},
                         {0,0,0,0,1,1,0,1},
                         {0,0,0,1,1,0,1,0}};
-
         getShortestPath(graph, 0);
     }
 }
