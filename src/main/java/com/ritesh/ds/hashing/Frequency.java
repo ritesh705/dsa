@@ -20,7 +20,7 @@ public class Frequency
 
         for(int i = 0; i < 26; i++)
         {
-            System.out.println("Frequecy of "+(char)(i+97)+" is "+indexArray[i]);
+            System.out.println("Frequency of "+(char)(i+97)+" is "+indexArray[i]);
         }
     }
 

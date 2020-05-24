@@ -1,6 +1,9 @@
 package com.ritesh.ds.arrays;
 
+import com.sun.deploy.util.StringUtils;
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /*
@@ -66,18 +69,6 @@ public class StockBuyAndSell
         return stocks;
     }
 
-    private static Integer getSellDay(int[] prices, int n, int i)
-    {
-        Integer sellDay = null;
-        if(i==0 && prices[i]>prices[i+1] ||
-                i==n-1 && prices[i]>prices[i-1] ||
-                i > 0 && i < n-1 && prices[i]>prices[i-1] && prices[i]>prices[i+1])
-        {
-            sellDay = i;
-        }
-        return sellDay;
-    }
-
     private static Integer getBuyDay(int[] prices, int n, int i)
     {
         Integer buyDay = null;
@@ -88,6 +79,18 @@ public class StockBuyAndSell
             buyDay =i;
         }
         return buyDay;
+    }
+
+    private static Integer getSellDay(int[] prices, int n, int i)
+    {
+        Integer sellDay = null;
+        if(i==0 && prices[i]>prices[i+1] ||
+                i==n-1 && prices[i]>prices[i-1] ||
+                i > 0 && i < n-1 && prices[i]>prices[i-1] && prices[i]>prices[i+1])
+        {
+            sellDay = i;
+        }
+        return sellDay;
     }
 
     // Run | Program
