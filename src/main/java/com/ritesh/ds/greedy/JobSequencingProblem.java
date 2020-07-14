@@ -30,15 +30,14 @@ class Job implements Comparable<Job>
     @Override
     public int compareTo(Job o)
     {
-        if(this.profit > o.profit)
-            return -1;
-        return 1;
+        if(o.profit > this.profit)
+            return 1;
+        return -1;
     }
 }
 
 public class JobSequencingProblem
 {
-
     private static Job[] scheduleJob01(Job[] jobs)
     {
         int size = jobs.length;
