@@ -55,6 +55,7 @@ public class App
         //Delete Key - Operation
         Delete delete = new Delete();
         System.out.println("Before");
+        
         Traversal.inorder(bst.root);
         Node updatedTree = delete.deleteKey(bst.root, 20);
         System.out.println("After");

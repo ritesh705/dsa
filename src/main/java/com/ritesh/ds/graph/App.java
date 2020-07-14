@@ -7,17 +7,22 @@ public class App
         System.out.println("\nGRAPH\n");
         Graph graph = getGraph();
         graph.printGraph();
+
         System.out.println("BFS Traversal");
         GraphBFS.bfs(graph,1);
+
         System.out.println("DFS Traversal");
         GraphDFS.dfs(graph,1);
+
         System.out.println("Recursive DFS Traversal");
         GraphDFS.recursiveDFS(graph, 1);
+
         System.out.println("Is Cyclic :"+CyclicGraph.isCyclic(graph));
 
         System.out.println("\nDIRECTED GRAPH\n");
         DirectedGraph directedGraph = getDirectedGraph();
         directedGraph.printGraph();
+
         System.out.println("Is Cyclic "+CyclicGraph.isCyclic(directedGraph));
     }
 
