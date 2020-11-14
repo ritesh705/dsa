@@ -1,9 +1,6 @@
 package com.ritesh.ds.arrays;
 
-import com.sun.deploy.util.StringUtils;
-
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /*
