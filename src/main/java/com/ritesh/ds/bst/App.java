@@ -8,6 +8,10 @@ import com.ritesh.ds.bst.traversal.Traversal;
 import com.ritesh.ds.tree.core.Node;
 import com.ritesh.ds.tree.core.Tree;
 
+import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.Hashtable;
+
 /*
 * @author: Ritesh Kumar | ritesh705@gmail.com
 * @since: 14th December, 2019
