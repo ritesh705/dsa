@@ -31,16 +31,13 @@ public class MaximumOccurredInteger
             }
         }
 
-        int prevSum = 0;
-        int sum  = 0;
-        for(int i=0; i< max+1; i++)
+        for(int i=1; i< max+1; i++)
         {
-            sum = sum + trackArray[i];
-            if(sum > prevSum)
+            trackArray[i] = trackArray[i] + trackArray[i-1];
+            if(trackArray[i] > trackArray[i-1])
             {
                 result = i;
             }
-            prevSum = sum;
         }
         return result;
     }
