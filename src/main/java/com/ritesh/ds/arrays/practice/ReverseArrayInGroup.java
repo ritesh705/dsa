@@ -7,7 +7,8 @@ public class ReverseArrayInGroup
     public static void main(String[] args)
     {
         int[] ipArray = {1,2,3,4,5,6,7,8};
-        Arrays.stream(reverseArrayInGroup(ipArray, 5)).forEach(n -> System.out.print(n+" "));
+        int[] result = reverseArrayInGroup(ipArray, 5);
+        Arrays.stream(result).forEach(n -> System.out.print(n+" "));
     }
 
     private static int[] reverseArrayInGroup(int[] ipArray, int K)
