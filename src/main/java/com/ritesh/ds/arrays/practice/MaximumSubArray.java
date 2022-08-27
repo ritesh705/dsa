@@ -4,8 +4,13 @@ public class MaximumSubArray
 {
     public static void main(String[] args)
     {
-        int[] ipArr = {-2,1,-3,4,-1,2,1,-5,4};
-        System.out.println(maxSubArray(ipArr));
+        int[] ipArr01 = {-2,1,-3,4,-1,2,1,-5,4};
+        int[] ipArr02 = {-2,-1};
+        int[] ipArr03 = {-1,-2};
+
+        System.out.println(maxSubArray(ipArr01));
+        System.out.println(maxSubArray(ipArr02));
+        System.out.println(maxSubArray(ipArr03));
     }
 
     private static int maxSubArray(int[] ipArray)
@@ -15,7 +20,7 @@ public class MaximumSubArray
         for(int i=0; i< ipArray.length; i++)
         {
             continuesSum = continuesSum + ipArray[i];
-            if(sum<continuesSum)
+            if(sum < continuesSum)
             {
                 sum = continuesSum;
             }
