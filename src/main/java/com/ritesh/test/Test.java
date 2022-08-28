@@ -1,10 +1,12 @@
 package com.ritesh.test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/*
+This class is for only testing small code snippet
+* */
 public class Test
 {
     static final int[] testArr = {1, 2};
