@@ -11,7 +11,6 @@ public class Test
 {
     public static void main(String[] args)
     {
-        List<Integer> testList = Collections.unmodifiableList(Arrays.asList(1, 2));
-        System.out.println(testList.get(1));
+        System.out.println("Test Class");
     }
 }
