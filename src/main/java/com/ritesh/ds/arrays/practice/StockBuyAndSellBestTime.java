@@ -30,10 +30,11 @@ public class StockBuyAndSellBestTime
     private static int getBestProfit(int[] priceArr)
     {
         int bestProfit = 0;
+        int prevBestProfit = 0;
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         int minIndex = 0;
-        int prevBestProfit = 0;
+        int maxIndex = 0;
         if(priceArr.length == 0)
         {
             return bestProfit;
@@ -44,7 +45,7 @@ public class StockBuyAndSellBestTime
             {
                 min = priceArr[i];
                 minIndex = i;
-                if(bestProfit > 0)
+                if(minIndex > maxIndex)
                 {
                     max = Integer.MIN_VALUE;
                     if(bestProfit > prevBestProfit)
@@ -53,9 +54,10 @@ public class StockBuyAndSellBestTime
                     }
                 }
             }
-            else if(minIndex<i && max < priceArr[i] && min < priceArr[i])
+            else if(minIndex < i && max < priceArr[i] && min < priceArr[i])
             {
                 max = priceArr[i];
+                maxIndex = i;
                 bestProfit = max-min;
             }
         }
