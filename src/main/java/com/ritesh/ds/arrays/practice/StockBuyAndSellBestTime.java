@@ -35,7 +35,7 @@ public class StockBuyAndSellBestTime
         int max = Integer.MIN_VALUE;
         int minIndex = 0;
         int maxIndex = 0;
-        if(priceArr.length == 0)
+        if(priceArr == null || priceArr.length == 0)
         {
             return bestProfit;
         }
