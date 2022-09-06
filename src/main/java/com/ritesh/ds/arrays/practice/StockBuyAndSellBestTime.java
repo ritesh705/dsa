@@ -19,7 +19,7 @@ public class StockBuyAndSellBestTime
         int[] priceArr02 = {9,9,0,3,0,7,7,7,4,1,5,0,1,7};
         int[] priceArr03 = {4,11,2,7,1};
         int[] priceArr04 = {5,5,4,9,3,8,5,5,1,6,8,3,4};
-        int[] priceArr05 = {7,2,5,3,8,1,9,4};
+        int[] priceArr05 = {7,2,5,3,8,1,9,4,11};
         System.out.println(getBestProfit(priceArr01));
         System.out.println(getBestProfit(priceArr02));
         System.out.println(getBestProfit(priceArr03));
