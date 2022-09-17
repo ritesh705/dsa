@@ -11,40 +11,40 @@ public class StockBuyAndSellMaxProfit
         System.out.println(getMaxProfit(priceArr));
     }
 
-    private static int getMaxProfit(int[] priceArr)
+    private static int getMaxProfit(int[] ipArr)
     {
         int buyPrice = 0;
         int sellPrice = 0;
         int maxProfit = 0;
-        if(priceArr.length == 0)
+        if(ipArr.length == 0)
         {
             return maxProfit;
         }
-        for(int i=0; i< priceArr.length; i++)
+        for(int i=0; i< ipArr.length; i++)
         {
             if(i==0)
             {
-                if(priceArr[i]<priceArr[i+1])
+                if(ipArr[i]<ipArr[i+1])
                 {
-                    buyPrice = priceArr[i];
+                    buyPrice = ipArr[i];
                     sellPrice = 0;
                 }
             }
-            else if(i==priceArr.length-1)
+            else if(i==ipArr.length-1)
             {
-                if(priceArr[i] > priceArr[i-1])
+                if(ipArr[i] > ipArr[i-1])
                 {
-                    sellPrice = priceArr[i];
+                    sellPrice = ipArr[i];
                 }
             }
-            else if(priceArr[i] < priceArr[i-1] && priceArr[i] < priceArr[i+1])
+            else if(ipArr[i] < ipArr[i-1] && ipArr[i] < ipArr[i+1])
             {
-                buyPrice = priceArr[i];
+                buyPrice = ipArr[i];
                 sellPrice = 0;
             }
-            else if(priceArr[i] > priceArr[i-1] && priceArr[i] > priceArr[i+1])
+            else if(ipArr[i] > ipArr[i-1] && ipArr[i] > ipArr[i+1])
             {
-                sellPrice = priceArr[i];
+                sellPrice = ipArr[i];
             }
             if(buyPrice > 0 && sellPrice > buyPrice)
             {
