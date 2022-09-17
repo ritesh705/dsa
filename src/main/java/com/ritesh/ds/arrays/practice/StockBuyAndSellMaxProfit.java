@@ -7,7 +7,7 @@ public class StockBuyAndSellMaxProfit
 {
     public static void main(String[] args)
     {
-        int[] priceArr = new int[]{100, 180, 260, 310, 40, 535, 695};
+        int[] priceArr = {100, 180, 260, 310, 40, 535, 695};
         System.out.println(getMaxProfit(priceArr));
     }
 
