@@ -10,45 +10,61 @@ and choosing a different day in the future to sell that stock.
 
 Return the maximum profit you can achieve from this transaction.
 If you cannot achieve any profit, return 0.
-* */
+*/
 public class StockBuyAndSellBestTime
 {
     public static void main(String[] args)
     {
-        int[] priceArr = new int[]{100, 180, 260, 310, 40, 535, 695 };
-        System.out.println(getMaxProfit(priceArr));
+        int[] priceArr01 = {100, 180, 260, 310, 40, 535, 695};
+        int[] priceArr02 = {9,9,0,3,0,7,7,7,4,1,5,0,1,7};
+        int[] priceArr03 = {4,11,2,7,1};
+        int[] priceArr04 = {5,5,4,9,3,8,5,5,1,6,8,3,4};
+        int[] priceArr05 = {7,2,5,3,8,1,9,4,11};
+        System.out.println(getBestProfit(priceArr01));
+        System.out.println(getBestProfit(priceArr02));
+        System.out.println(getBestProfit(priceArr03));
+        System.out.println(getBestProfit(priceArr04));
+        System.out.println(getBestProfit(priceArr05));
     }
 
-    private static int getMaxProfit(int[] priceArr)
+    private static int getBestProfit(int[] priceArr)
     {
-        int buyPrice = 0;
-        int sellPrice = 0;
-        int maxProfit = 0;
-        for(int i=0; i< priceArr.length; i++)
+        int bestProfit = 0;
+        int prevBestProfit = 0;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        int minIndex = 0;
+        int maxIndex = 0;
+        if(priceArr == null || priceArr.length == 0)
         {
-            if(i==0 && priceArr[i]<priceArr[i+1])
+            return bestProfit;
+        }
+        for(int i=0; i<priceArr.length; i++)
+        {
+            if(min > priceArr[i])
             {
-                buyPrice = priceArr[i];
-                sellPrice = 0;
+                min = priceArr[i];
+                minIndex = i;
+                if(minIndex > maxIndex)
+                {
+                    max = Integer.MIN_VALUE;
+                    if(bestProfit > prevBestProfit)
+                    {
+                        prevBestProfit = bestProfit;
+                    }
+                }
             }
-            else if(i==priceArr.length-1 && priceArr[i] > priceArr[i-1])
+            else if(minIndex < i && max < priceArr[i] && min < priceArr[i])
             {
-                sellPrice = priceArr[i];
-            }
-            else if(priceArr[i] < priceArr[i-1] && priceArr[i] < priceArr[i+1])
-            {
-                buyPrice = priceArr[i];
-                sellPrice = 0;
-            }
-            else if(priceArr[i] > priceArr[i-1] && priceArr[i] > priceArr[i+1])
-            {
-                sellPrice = priceArr[i];
-            }
-            if(buyPrice > 0 && sellPrice > buyPrice)
-            {
-                maxProfit = maxProfit + sellPrice-buyPrice;
+                max = priceArr[i];
+                maxIndex = i;
+                bestProfit = max-min;
             }
         }
-        return maxProfit;
+        if(prevBestProfit > bestProfit)
+        {
+            bestProfit = prevBestProfit;
+        }
+        return bestProfit;
     }
 }
