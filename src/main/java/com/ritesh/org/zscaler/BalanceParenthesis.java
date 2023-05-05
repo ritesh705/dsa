@@ -4,8 +4,7 @@ import java.util.Stack;
 
 public class BalanceParenthesis
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         System.out.println(isParenthesisBalanced("({[]})"));
     }
 
@@ -47,8 +46,7 @@ public class BalanceParenthesis
                 }
             }
         }
-        if(stack.size()>0)
-        {
+        if(stack.size()>0) {
             isCorrect = false;
         }
         return isCorrect;
