@@ -9,4 +9,9 @@ public class Test
     {
         System.out.println("Test Class");
     }
+
+    private String getTestName()
+    {
+        return "This is Test Name";
+    }
 }
